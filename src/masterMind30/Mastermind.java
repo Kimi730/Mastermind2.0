@@ -20,7 +20,7 @@ public class Mastermind {
 		String orange = "O";
 		String white = "W";
 		String black = "X";
-
+		
 		Scanner sc = new Scanner(System.in);
 
 		String code1 = yellow;
