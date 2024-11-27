@@ -11,113 +11,102 @@ public class Mastermind {
 		System.out.println("If you get a X, it means you have it at the right place, if its W, it means it is at the wrong place and none of both means it doesn't exist.");
 		System.out.println("Turn on caps lock, this will be handy, type in one line with spaces");
 		System.out.println("Pickable colors: R,Y,G,B,P");
-
-		String red = "R";
-		String yellow = "Y";
-		String green = "G";
-		String blue = "B";
-		String pink = "P";
-		String orange = "O";
-		String white = "W";
-		String black = "X";
 		
+        String[] colors = {"R","Y","G","B","P","O"};
+		
+        String[] checks = {"X","W"};
+        
+        String[] codes = {colors[5],colors[4],colors[3],colors[0]};
+        
 		Scanner sc = new Scanner(System.in);
+		
+        String[] gokken = new String[4];
 
-		String code1 = yellow;
-		String code2 = pink;
-		String code3 = blue;
-		String code4 = red;
-
-		String gok1;
-		String gok2;
-		String gok3;
-		String gok4;
 		
 		for (int round = 1; round <= 10; round++) {
 
 			System.out.println("");
 			
 			System.out.println("Round " + round);
-			
-			
-			gok1 = sc.next();
-			gok2 = sc.next();
-			gok3 = sc.next();
-			gok4 = sc.next();
+		
+			gokken[0] = sc.next();
+			gokken[1] = sc.next();
+			gokken[2]= sc.next();
+			gokken[3] = sc.next();
 
 			
-			if (gok1.equals(code1)) 
+			if (gokken[0].equals(codes[0])) 
 			{
-				System.out.print(black);
-			} else if (gok1.equals(code2)) 
+				System.out.print(checks[0]);
+			} else if (gokken[0].equals(codes[1])) 
 			{
-				System.out.print(white);
-			} else if (gok1.equals(code3))
+				System.out.print(checks[1]);
+			} else if (gokken[0].equals(codes[2]))
 			{
-				System.out.print(white);
-			} else if (gok1.equals(code4))
+				System.out.print(checks[1]);
+			} else if (gokken[0].equals(codes[3]))
 			
 			{
-				System.out.print(white);
+				System.out.print(checks[1]);
 			} else {
 				System.out.print("  ");
 			}
 			
 			
-			if (gok2.equals(code2)) 
+			if (gokken[1].equals(codes[1])) 
 			{
-				System.out.print(" " + black);
-			} else if (gok2.equals(code1)) 
+				System.out.print(" " + checks[0]);
+			} else if (gokken[1].equals(codes[0])) 
 			{
-				System.out.print(" " + white);
-			} else if (gok2.equals(code3)) 
+				System.out.print(" " + checks[1]);
+			} else if (gokken[1].equals(codes[2])) 
 			{
-				System.out.print(" " + white);
-			} else if (gok2.equals(code4)) 
+				System.out.print(" " + checks[1]);
+			} else if (gokken[1].equals(codes[3])) 
 			{
-				System.out.print(" " + white);
+				System.out.print(" " + checks[1]);
 			} else {
 				System.out.print("  ");
 			}
 
 			
-			if (gok3.equals(code3)) 
+			if (gokken[2].equals(codes[2])) 
 			{
-				System.out.print(" " + black);
-			} else if (gok3.equals(code1)) 
+				System.out.print(" " + checks[0]);
+			} else if (gokken[2].equals(codes[0])) 
 			{
-				System.out.print(" " + white);
-			} else if (gok3.equals(code2)) 
+				System.out.print(" " + checks[1]);
+			} else if (gokken[2].equals(codes[1])) 
 			{
-				System.out.print(" " + white);
-			} else if (gok3.equals(code4)) 
+				System.out.print(" " + checks[1]);
+			} else if (gokken[2].equals(codes[3])) 
 			{
-				System.out.print(" " + white);
+				System.out.print(" " + checks[1]);
 			} else {
 				System.out.print("  ");
 			}
 
 			
-			if (gok4.equals(code4)) 
+			if (gokken[3].equals(codes[3])) 
 			{
-				System.out.print(" " + black);
-			} else if (gok4.equals(code1)) 
+				System.out.print(" " + checks[0]);
+			} else if (gokken[3].equals(codes[0])) 
 			{
-				System.out.print(" " + white);
-			} else if (gok4.equals(code2)) 
+				System.out.print(" " + checks[1]);
+			} else if (gokken[3].equals(codes[1])) 
 			{
-				System.out.print(" " + white);
-			} else if (gok4.equals(code3)) 
+				System.out.print(" " + checks[1]);
+			} else if (gokken[3].equals(codes[2])) 
 			{
-				System.out.print(" " + white);
+				System.out.print(" " + checks[1]);
 			} else {
 				System.out.print("  ");
 			}
 
 			
 			System.out.println("");
-			String allesgoed = gok1 + gok2 + gok3 + gok4;
-			String code1234 = code1 + code2 + code3 + code4;
+			String allesgoed = gokken[0] + gokken[1] + gokken[2] + gokken[3];
+			String code1234 = codes[0] + codes[1] + codes[2] + codes[3];
 			if (code1234.equals(allesgoed)) 
 			{
 				System.out.println("Gongratulations ! ! !");
@@ -126,6 +115,7 @@ public class Mastermind {
 			
 			if (round>=10) {
 				System.out.println("You lost ! ! !");
+				 sc.close();
 			}
 		}
     }
