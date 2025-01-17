@@ -38,14 +38,16 @@ public class FunctieMastermind2 {
 			}
 		}
 
-	public void howtoWin() {
+	public boolean howtoWin() {
 
 		if (allCodes.equals(allCorrect)) {
 
 			System.out.println("");
 			System.out.println("Gongratulations ! ! !");
+			return false;
 
 		}
+		return true;
 	}
 
 	public String[] ifElse() {
