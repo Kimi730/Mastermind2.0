@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class FunctieMastermind2 {
 
+	/* Local variables */
+
 	String[] secretCodes = new String[4];
 
 	String[] playerGuess = new String[4];
@@ -35,8 +37,8 @@ public class FunctieMastermind2 {
 		for (int j = 0; j < playerGuess.length; j++) {
 			playerGuess[j] = sc.next();
 			allCorrect = playerGuess[0] + playerGuess[1] + playerGuess[2] + playerGuess[3];
-			}
 		}
+	}
 
 	public boolean howtoWin() {
 
