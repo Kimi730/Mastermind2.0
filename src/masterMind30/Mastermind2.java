@@ -37,7 +37,13 @@ public class Mastermind2 {
 			functie.ifElse();
 
 			/* How to win */
-			functie.howtoWin();
+
+			if (functie.howtoWin()) {
+			} else {
+				System.out.println("Het spel stopt hier.");
+				System.out.println("Bedankt voor het spelen!");
+				break;
+			}
 
 			if (roundTen == 9) {
 				System.out.println("Last chance!");

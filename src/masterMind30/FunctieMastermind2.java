@@ -47,7 +47,6 @@ public class FunctieMastermind2 {
 			System.out.println("");
 			System.out.println("Gongratulations ! ! !");
 			return false;
-
 		}
 		return true;
 	}
@@ -91,7 +90,7 @@ public class FunctieMastermind2 {
 		} else {
 			System.out.print("  ");
 		}
-
+		System.out.println("");
 		return checkColors;
 	}
 }
